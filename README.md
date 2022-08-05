@@ -11,9 +11,7 @@ Setup your StarRocks development in one docker container!
 
 ## Usage
 
-1. Pull latest Docker image
-
-`sudo docker pull d87904488/starrocks-docker-dev`
+1. Pull latest Docker image: `sudo docker pull d87904488/starrocks-docker-dev` .
 
 2. Run container
 
@@ -31,9 +29,7 @@ sudo docker run -it -p 2222:2222 \
 
 If you want to use GDB, `--privileged  --cap-add SYS_PTRACE ` is necessary.
 
-3. Use ssh to connect container
-
-`sudo ssh root@localhost -p 2222`
+3. Use ssh to connect container: `sudo ssh root@localhost -p 2222`.
 
 ## How to Development?
 
