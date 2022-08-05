@@ -27,7 +27,7 @@ sudo docker run -it -p 2222:2222 \
 
 **Notice: You should mount .m2 and source code folder. Otherwise your code and jar will not be persisted.**
 
-If you want to use GDB, `--privileged  --cap-add SYS_PTRACE ` is necessary.
+If you want to use GDB, `--privileged  --cap-add SYS_PTRACE` is necessary.
 
 3. Use ssh to connect container: `sudo ssh root@localhost -p 2222`.
 
@@ -36,6 +36,6 @@ If you want to use GDB, `--privileged  --cap-add SYS_PTRACE ` is necessary.
 * You can use **VS Code Remote Development**, **JetBrains Gateway**, **Clion**, **IDEA** or **VIM**.
 * Maybe you need to development with Hive, Hadoop, ElasticSearch... You can use `docker network` to setup network easily!
 
-## Last
+## At Last
 
 Enjoy it !
