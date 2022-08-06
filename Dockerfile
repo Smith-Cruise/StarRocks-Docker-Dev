@@ -25,7 +25,8 @@ RUN yum -y install openssh-server && \
     cd /root/mold && \
     git checkout v1.4.0 && \
     make -j$(nproc) && \
-    make install
+    make install && \
+    ln -s /usr/local/bin/mold /usr/local/bin/ld
  
 ENV STARROCKS_HOME ${starrockshome}
 RUN echo "export STARROCKS_GCC_HOME=/usr">>~/.bashrc && \
