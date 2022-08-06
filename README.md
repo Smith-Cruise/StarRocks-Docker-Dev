@@ -14,7 +14,7 @@ Setup your StarRocks development just in one docker container!
 - Built-in tmux, mysql-client
 ## Usage
 
-1. Pull Docker image: `sudo docker pull d87904488/starrocks-docker-dev` .
+1. Pull Docker image: `sudo docker pull d87904488/starrocks-docker-dev:main` .
 
 2. Run container
 
