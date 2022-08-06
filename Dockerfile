@@ -25,8 +25,7 @@ RUN yum -y install openssh-server && \
     cd /root/mold && \
     git checkout v1.4.0 && \
     make -j$(nproc) && \
-    make install && \
-    ln -s /usr/local/bin/mold /usr/local/bin/ld
+    make install
  
 ENV STARROCKS_HOME ${starrockshome}
 RUN echo "export STARROCKS_GCC_HOME=/usr">>~/.bashrc && \
@@ -36,7 +35,7 @@ RUN echo "export STARROCKS_GCC_HOME=/usr">>~/.bashrc && \
     echo "export DEFAULT_DIR=/var/local" >> ~/.bashrc && \
     echo "export MAVEN_HOME=/usr/share/maven" >> ~/.bashrc && \
     echo "export PATH=$PATH:/var/local/llvm/bin:$JAVA_HOME/bin" >> ~/.bashrc && \
-    echo "export STARROCKS_CXX_LINKER_FLAGS=-B/usr/local/bin" >> ~/.bashrc && \
+    echo "export STARROCKS_CXX_LINKER_FLAGS=-B/usr/local/bin/mold" >> ~/.bashrc && \
     echo "export BUILD_TYPE=DEBUG" >> ~/.bashrc && \
     echo "source /opt/rh/devtoolset-11/enable" >> ~/.bashrc && \
     echo "source /opt/rh/rh-git227/enable" >> ~/.bashrc && \
