@@ -23,8 +23,8 @@ RUN yum -y install openssh-server && \
     git clone https://github.com/rui314/mold.git /root/mold && \
     # git clone https://gitee.com/mirrors/mold.git /root/mold && \
     cd /root/mold && \
-    git checkout v1.4.1 && \
-    make -j$(nproc) CXX=g++-10 && \
+    git checkout v1.3.1 && \
+    make -j$(nproc) && \
     make install && \
     ln -s /usr/local/bin/mold /usr/local/bin/ld
  
