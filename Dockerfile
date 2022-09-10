@@ -36,7 +36,7 @@ RUN echo "export STARROCKS_GCC_HOME=/usr">>~/.bashrc && \
     echo "export DEFAULT_DIR=/var/local" >> ~/.bashrc && \
     echo "export MAVEN_HOME=/usr/share/maven" >> ~/.bashrc && \
     echo "export PATH=$PATH:/var/local/llvm/bin:$JAVA_HOME/bin" >> ~/.bashrc && \
-    echo "export STARROCKS_CXX_LINKER_FLAGS=-B/usr/local/bin" >> ~/.bashrc && \
+    echo "export STARROCKS_CXX_LINKER_FLAGS=-B/usr/local/bin/" >> ~/.bashrc && \
     echo "export BUILD_TYPE=DEBUG" >> ~/.bashrc && \
     echo "source /opt/rh/devtoolset-11/enable" >> ~/.bashrc && \
     echo "source /opt/rh/rh-git227/enable" >> ~/.bashrc && \
