@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag d87904488/starrocks-docker-dev:main
+      run: docker build . --file Dockerfile --tag d87904488/starrocks-docker-dev:latest
     - name: Docker Login
       # You may pin to the exact commit or the version.
       # uses: docker/login-action@49ed152c8eca782a232dede0303416e8f356c37b
@@ -29,4 +29,4 @@ jobs:
         # Password or personal access token used to log against the Docker registry
         password: ${{  secrets.DOCKER_PASSWORD  }}
     - name: Push
-      run: docker push d87904488/starrocks-docker-dev:main
+      run: docker push d87904488/starrocks-docker-dev:latest
