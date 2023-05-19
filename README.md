@@ -9,12 +9,12 @@ Setup your StarRocks development just in one docker container!
 ## Features
 
 - Built-in thirdparty, you don't need to compile it by yourself
-- Use [mold](https://github.com/rui314/mold) to make BE link faster
+- Use LLVM-15 to compile and link.
 - Built-in GDB, GDB Server module, support BE debug operation
-- Built-in tmux, mysql-client
+- Built-in tmux, mysql-client[TODO]
 ## Usage
 
-1. Pull Docker image: `sudo docker pull d87904488/starrocks-docker-dev:main` .
+1. Pull Docker image: `sudo docker pull d87904488/starrocks-docker-dev:latest` .
 
 2. Run container
 
@@ -25,7 +25,7 @@ sudo docker run -it -p 2222:2222 \
   -v ~/.m2:/root/.m2 \
   -v /home/smith/starrocks:/root/starrocks \
   --name smith-dev \
-  -d d87904488/starrocks-docker-dev:main
+  -d d87904488/starrocks-docker-dev:latest
 ```
 
 **Notice: You should mount .m2 and source code folder. Otherwise your code and jar will not be persisted.**
