@@ -32,7 +32,7 @@ sudo docker run -it -p 2222:2222 \
 
 `--privileged  --cap-add SYS_PTRACE` is necessary for GDB.
 
-3. Enjoy it, you can use ssh to connect container: `sudo ssh root@localhost -p 2222`.
+3. Enjoy it, you can use ssh to connect container: `sudo ssh root@localhost -p 2222`. Default password is `xxx`.
 
 
 ## FAQ
